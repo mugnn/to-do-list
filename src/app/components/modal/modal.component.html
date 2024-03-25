@@ -1,0 +1,10 @@
+<div class="modal" [ngClass]="{'open': isOpen}">
+  <div class="modal-content">
+    <div id="modal-header">
+      <div id="box-close-button" (click)="closeWindow()">
+        <img id="close-button" alt="close" src="./assets/close-window-icon.svg" />
+      </div>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</div>

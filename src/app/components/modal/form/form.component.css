@@ -1,0 +1,61 @@
+#modal-body {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  padding: 2vmin 5vmin 2vmin 5vmin;
+}
+.form-input {
+  width: 60vmin;
+  height: 3vmin;
+  margin-bottom: 8vmin;
+
+  border: 0;
+  border-bottom: 0.2vmin solid #2E3640;
+  background-color: var(--primary-color);
+
+  color: white;
+  font-family: var(--default-font);
+  font-weight: 600;
+}
+.form-input:focus {
+  outline: none;
+  border-bottom: 0.2vmin solid var(--secondary-color);
+}
+.form-input::placeholder {
+  font-family: var(--default-font);
+  font-weight: 600;
+}
+#modal-padding {
+  padding: 0 5vmin 0 5vmin;
+  display: flex;
+  height: 8vmin;
+
+  justify-content: space-between;
+}
+.state-select:focus {
+  outline: none;
+  border-radius: 0.4vmin 0.4vmin 0 0;
+  box-shadow: inset black 0px 0px 10px -5px;
+}
+#submit-button {
+  height: 3.5vmin;
+  width: 10vmin;
+  align-self: flex-end;
+
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  border-radius: 0.5vmin;
+
+  font-family: var(--default-font);
+  font-weight: 600;
+  color: var(--secondary-color);
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+}
+#submit-button:hover {
+  background-color: #544C43;
+  transition: 0.2s;
+}
+#input-desc {
+  margin-bottom: 4vmin;
+}

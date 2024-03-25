@@ -1,0 +1,54 @@
+<div class="task-info">
+
+  <div class="modal-task-header">
+    <h1 class="modal-task-title" [ngClass]="{'to-hide': editMode}">{{ taskContent.title }}</h1>
+    <input 
+      class="modal-task-desc" 
+      id="modal-input" 
+      type="text" 
+      maxlength="26" 
+      [(ngModel)]="updatedTitle"
+      [ngClass]="{'to-hide': !editMode}"
+    />
+    <div class="right-box" [ngClass]="{'fit-in': editMode}">
+      <div *ngIf="taskContent.state === '1'">
+        <img class="progress-icon" alt="to-begin-icon" src="./assets/to-begin-c.svg"/>
+      </div>
+      <div *ngIf="taskContent.state === '2'">
+        <img class="progress-icon" alt="to-begin-icon" src="./assets/in-progress-c.svg"/>
+      </div>
+      <div *ngIf="taskContent.state === '3'">
+        <img class="progress-icon" alt="to-begin-icon" src="./assets/solved-c.svg"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-label-box">
+    <p id="modal-task-desc-label">details:</p>
+    <div class="edit-button" (click)="turnEditMode()" [ngClass]="{'span-edit-mode': editMode}">
+      <img alt="edit" src="./assets/edit-button.svg" class="edit-icon"/>
+    </div>
+  </div>
+
+  <p class="modal-task-desc" 
+    id="paragraph" 
+    [ngClass]="{'to-hide': editMode}"
+  >{{ taskContent.description }}</p>
+  <textarea
+    class="modal-task-desc" 
+    id="paragraph"
+    [(ngModel)]="updatedDesc"
+    [ngClass]="{'to-hide': !editMode}"
+  >
+  </textarea>
+  
+  <div class="sub-tasks">
+    <app-sub-tasks [taskIndex]="taskIndex" />
+  </div>
+
+  <div class="padding">
+    <app-dropdown-state (state)="getState($event)"/>
+    <button id="submit-button" (click)="getEditedText()" [ngClass]="{'block-button': editMode}">submit</button>
+  </div>
+
+</div>

@@ -1,0 +1,107 @@
+.modal-task-title {
+  font-family: var(--default-font);
+  color: var(--secondary-color);
+  padding-left: 3vmin;
+}
+.modal-task-desc {
+  font-family: var(--default-font);
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  width: 60vmin;
+  height: 8vmin;
+  resize: none;
+
+  color: white;
+  margin: 1vmin 0 0 5vmin;
+}
+.modal-task-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress-icon {
+  height: 3vmin;
+  margin-top: 1.1vmin;
+  padding-right: 3vmin;
+}
+#modal-task-desc-label {
+  font-family: var(--default-font);
+  color: white;
+
+  padding: 0 0 0 3.2vmin;
+  margin: 0;
+}
+#submit-button {
+  height: 3.5vmin;
+  width: 10vmin;
+  align-self: flex-end;
+
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  border-radius: 0.5vmin;
+
+  font-family: var(--default-font);
+  font-weight: 600;
+  color: var(--secondary-color);
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+}
+#submit-button:hover {
+  background-color: #544C43;
+  transition: 0.2s;
+}
+.edit-label-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+.edit-button {
+  height: 2.5vmin;
+  width: 2.5vmin;
+  border-radius: 1.25vmin;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2vmin;
+}
+.edit-button:hover {
+  background-color: #282F37;
+}
+#paragraph {
+  font-size: 1.3vmin;
+}
+#modal-input {
+  color: var(--secondary-color);
+  font-size: 3.3vmin;
+  font-weight: 700;
+  height: fit-content;
+  width: fit-content;
+
+  padding-left: 3vmin;
+  margin: 1.8vmin 0 1.8vmin 0;
+}
+.to-hide {
+  display: none;
+}
+.span-edit-mode {
+  background-color: #282F37;
+}
+.sub-tasks {
+  align-self: center;
+  height: 15vmin;
+  width: 100%;
+  margin: 1vmin;
+}
+.padding {
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 3vmin 0 3vmin;
+}

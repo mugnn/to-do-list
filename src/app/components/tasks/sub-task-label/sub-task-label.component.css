@@ -1,0 +1,43 @@
+.sub-task-box {
+  width: 40vmin;
+  height: 5vmin;
+  background-color: #0C0D10;
+  border-radius: 1.2vmin;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vmin;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-task-title {
+  background-color: transparent;
+  font-family: var(--default-font);
+  color: var(--secondary-color);
+  font-size: 2vmin;
+  font-weight: 700;
+
+
+  border: none;
+  outline: none;
+  margin-left: 2vmin;
+}
+.sub-task-title:focus {
+  outline: none;
+}
+.progress-icon {
+  height: 2vmin;
+  width: 2vmin;
+  margin-right: 2vmin;
+}
+.submit-icon {
+  height: 3vmin;
+  width: 3vmin;
+}
+#submit-icon-box {
+  height: 3vmin;
+  width: 3vmin;
+  margin: 0 0 2vmin 2vmin;
+}

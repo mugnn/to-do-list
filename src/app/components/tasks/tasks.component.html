@@ -1,1 +1,19 @@
-<p>tasks works!</p>
+<div class="task-box">
+  <div class="task-header">
+    <p id="title">TASKS:</p>
+    <app-add-remove-component (toDelete)="toDelete()"></app-add-remove-component>
+  </div>
+  <div class="task-list">
+    <div *ngFor="let task of taskList" class="single-task-box">
+      <app-task-component [taskContent]="task" [taskIndex]="taskList.indexOf(task)"></app-task-component>
+      <div class="deleteButton" [ngClass]="{'display': deleteMode}">
+        <img 
+          alt="remove-task" 
+          src="./assets/remove-task-icon.svg" 
+          class="icon" 
+          (click)="deleteComponent(taskList.indexOf(task))"
+        />
+      </div>
+    </div>
+  </div>
+</div>

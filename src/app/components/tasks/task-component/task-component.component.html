@@ -1,1 +1,27 @@
-<p>task-component works!</p>
+<style>
+  p {
+    margin: 0;
+  }
+</style>
+
+<div class="task-component" (click)="openModal()">
+  <div *ngIf="taskContent.state === '1'" class="state-icon-box">
+    <img class="progress-icon" alt="to-begin-icon" src="./assets/to-begin-c.svg"/>
+  </div>
+  <div *ngIf="taskContent.state === '2'" class="state-icon-box">
+    <img class="progress-icon" alt="to-begin-icon" src="./assets/in-progress-c.svg"/>
+  </div>
+  <div *ngIf="taskContent.state === '3'" class="state-icon-box">
+    <img class="progress-icon" alt="to-begin-icon" src="./assets/solved-c.svg"/>
+  </div>
+  <div id="task-component-text-content">
+    <h4 class="task-title"> {{ taskContent.title }} </h4>
+  
+    <p class="task-desc">{{ taskContent.description }}</p>
+  </div>
+</div>
+
+
+<app-modal [isOpen]="isOpen" (reset)="resetState()">
+  <app-task-info [taskContent]="taskContent" [taskIndex]="taskIndex"/>
+</app-modal>

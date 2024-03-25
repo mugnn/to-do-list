@@ -1,0 +1,17 @@
+.icons-box {
+  display: flex;
+  flex-direction: row;
+  gap: 2vmin;
+}
+.icon {
+  filter: drop-shadow(1px 4px 4px rgb(0, 0, 0, 0.2));
+  user-select: none;
+  
+  cursor: pointer;
+}
+.add:hover {
+  filter: contrast(190%);
+}
+.remove:hover {
+  filter: contrast(150%);
+}

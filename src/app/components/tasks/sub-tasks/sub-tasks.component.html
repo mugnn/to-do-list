@@ -1,0 +1,17 @@
+<div class="task-box">
+  <div class="task-list">
+    <div *ngIf="insertTaskMode">
+      <app-sub-task-label class="sub-task-component-box" [insertMode]="insertTaskMode" [subTaskIndex]="taskIndex" (updatedTaskList)="newListValues($event)" (resetInsertMode)="resetInsertMode($event)"/>
+    </div>
+    <div *ngFor="let subTask of subTaskList">
+      <app-sub-task-component class="sub-task-component-box" [subTaskValues]="subTask" [removeSubTasks]="removeTaskMode" [taskIndex]="taskIndex" [subTaskIndex]="subTaskList.indexOf(subTask)" (updatedTaskList)="newListValues($event)"/>
+    </div>
+  </div>
+  <div class="task-header">
+    <img alt="add-task" src="./assets/new-task-icon.svg" class="icon add" (click)="insertNewTask()"/>
+    <img alt="remove-task" src="./assets/remove-task-icon.svg" class="icon remove" (click)="removeTasks()"/>
+  </div>
+</div>
+
+  
+  <!-- (click)="deleteComponent(taskList.indexOf(task))" -->

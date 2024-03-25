@@ -1,0 +1,29 @@
+<div class="sub-task-box">
+  <input class="sub-task-title" type="text" [(ngModel)]="subTaskValues.title" maxlength="20"/>
+
+  <div *ngIf="subTaskValues.state === '0'">
+    <img 
+      class="progress-icon" 
+      alt="in-progress-c" 
+      src="./assets/in-progress-c.svg" 
+      (click)="subTaskValues.state = '1'"
+    />
+  </div>
+  <div *ngIf="subTaskValues.state === '1'">
+    <img 
+      class="progress-icon" 
+      alt="solved-c" 
+      src="./assets/solved-c.svg" 
+      (click)="subTaskValues.state = '0'" 
+    />
+  </div>
+</div>
+
+<div *ngIf="removeSubTasks" id="submit-icon-box">
+  <img 
+    class="submit-icon"
+    alt="submit-subtask" 
+    src="./assets/remove-task-icon.svg"
+    (click)="deleteSubTask()"
+  />
+</div>

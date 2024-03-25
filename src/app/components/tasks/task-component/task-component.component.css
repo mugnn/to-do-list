@@ -1,0 +1,44 @@
+.task-component {
+  width: 70vmin;
+  height: 8vmin;
+  border-radius: 1vmin;
+
+  background-color: var(--primary-color);
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 1.5vmin;
+
+  cursor: pointer;
+}
+.progress-icon {
+  height: 2.5vmin;
+}
+.task-title {
+  font-family: var(--default-font);
+  color: var(--secondary-color);
+  padding: 0 0 0.2vmin 2vmin;
+}
+.task-desc {
+  font-family: var(--default-font);
+  color: var(--secondary-color);
+  padding: 0 0 0.2vmin 2vmin;
+
+  font-size: 1.2vmin;
+}
+#task-component-text-content {
+  width: 60vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.state-icon-box {
+  width: 7vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,13 @@
+<p-dropdown 
+  [options]="options" 
+  [(ngModel)]="selectState" 
+  optionLabel="label" 
+  placeholder="Select a state"
+  >
+  <ng-template let-option pTemplate="item">
+    <div class="select-box" (click)="toEmmit(option.value)">
+      <img [src]="option.image" alt="icon" class="icon"/>
+      <span>{{ option.label }}</span>
+    </div>
+  </ng-template>
+</p-dropdown>

@@ -1,0 +1,16 @@
+.main {
+  height: 100vh;
+  background-color: var(--background-color);
+}
+.top {
+  height: 40%;
+}
+.bottom {
+  height: 60%;
+  margin: 0 6.8% 0 6.8%;
+}
+#grapic-component {
+  position: absolute;
+  top: 52vh;
+  left: 68vw;
+}

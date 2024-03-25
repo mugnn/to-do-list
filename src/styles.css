@@ -1,6 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@import 'ngx-toastr/toastr';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+
 /* global styles */
 
 body {
   margin: 0;
   height: 100vh;
+}
+
+/* starts with default theme (earthsong) */
+
+:root {
+  --background-color: #36312B;
+  --primary-color: #161A1F;
+  --secondary-color: #F5BA47;
+  --tertiary-color: #62A267;
+  --begin-color: #23A8C4;
+  --delete-color: #D25847;
+  --overflow-color: #27231F;
+  --hover-color: #3F3A36;
+  
+  --default-font: "Inter", sans-serif;
+}
+
+/* toastr styles */
+
+#toast-container {
+  font-family: var(--default-font);
+}
+.p-dropdown {
+  width: 18vmin;
+  height: 4vmin;
+  background-color: #2E3640;
+  border: none;
+}
+.p-dropdown .p-dropdown-item {
+  font-family: var(--default-font);
+  font-size: 1.3vmin; 
+
+  height: 3vmin;
+  
+  padding: 0;
+  color: #333;
+}
+.p-dropdown-label {
+  font-size: 1.4vmin;
+  font-family: var(--default-font);
+  font-weight: 700;
 }

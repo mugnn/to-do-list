@@ -1,1 +1,26 @@
-<p>calendar works!</p>
+
+<div class="calendar-box">
+  <div class="display">
+
+    <div class="display-calendar">
+      <div *ngFor="let day of weekDays" id="days-box">
+        <p class="days-title">{{ days[weekDays.indexOf(day)] }}</p>
+        <div *ngIf="day === today; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <div id="today-box">
+            <p>{{ day }}</p>
+          </div>
+        </ng-template>
+        <ng-template #elseBlock>
+          <p>{{ day }}</p>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="display-date-text">
+      <p id="date-text">{{ date }}</p>
+    </div>
+
+  </div>
+</div>
+

@@ -1,1 +1,7 @@
-<p>add-remove-component works!</p>
+<div class="icons-box">
+  <img alt="add-task" src="./assets/new-task-icon.svg" class="icon add" (click)="openModal()"/>
+  <img alt="remove-task" src="./assets/remove-task-icon.svg" class="icon remove" (click)="deleteComponent()" />
+  <app-modal [isOpen]="isOpen" (reset)="resetState()">
+    <app-form (closeForm)="resetState()" />
+  </app-modal>
+</div>
