@@ -1,13 +1,13 @@
 export const environment = {
-  loadTask: 'http://localhost:3000/loadTask',
-  getTasks: 'http://localhost:3000/getTasks',
-  deleteTask: 'http://localhost:3000/deleteTask',
-  updateTask: 'http://localhost:3000/updateTask',
+  loadTask: 'https://mxje3fp.localto.net/loadTask',
+  getTasks: 'https://mxje3fp.localto.net/getTasks',
+  deleteTask: 'https://mxje3fp.localto.net/deleteTask',
+  updateTask: 'https://mxje3fp.localto.net/updateTask',
 
   // sub-tasks calls
   
-  loadSubTask: 'http://localhost:3000/loadSubTask',
-  getSubTasks: 'http://localhost:3000/getSubTasks',
-  deleteSubTask: 'http://localhost:3000/deleteSubTask',
-  updateSubTask: 'http://localhost:3000/updateSubTask',
+  loadSubTask: 'https://mxje3fp.localto.net/loadSubTask',
+  getSubTasks: 'https://mxje3fp.localto.net/getSubTasks',
+  deleteSubTask: 'https://mxje3fp.localto.net/deleteSubTask',
+  updateSubTask: 'https://mxje3fp.localto.net/updateSubTask',
 };
