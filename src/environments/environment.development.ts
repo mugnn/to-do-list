@@ -1,13 +1,13 @@
 export const environment = {
-  loadTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/loadTask',
-  getTasks: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/getTasks',
-  deleteTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/deleteTask',
-  updateTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/updateTask',
+  loadTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/loadTask',
+  getTasks: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/getTasks',
+  deleteTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/deleteTask',
+  updateTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/updateTask',
 
   // sub-tasks calls
   
-  loadSubTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/loadSubTask',
-  getSubTasks: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/getSubTasks',
-  deleteSubTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/deleteSubTask',
-  updateSubTask: 'https://a2eaa0c7ba8ea07f14c3c2c52857d284.serveo.net/updateSubTask',
+  loadSubTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/loadSubTask',
+  getSubTasks: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/getSubTasks',
+  deleteSubTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/deleteSubTask',
+  updateSubTask: 'https://00bea81196519e2e9b369424558c9f59.serveo.net/updateSubTask',
 };
