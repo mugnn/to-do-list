@@ -9,7 +9,7 @@
   width: 90%;
   height: 30vmin;
   border-radius: 3vmin;
-  /* update color at root */
+  
   background-color: var(--primary-color);
   box-shadow: rgb(0, 0, 0, 0.3) 0px 0px 10px;
 
