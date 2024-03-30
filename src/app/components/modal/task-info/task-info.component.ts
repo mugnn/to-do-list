@@ -27,9 +27,6 @@ export class TaskInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.resetInputValues();
-    console.log(this.updatedTitle)
-    console.log(this.updatedDesc)
-    console.log(this.updatedState)
   }
 
   constructor(private tasksService: HandleTasksService, 
@@ -55,13 +52,7 @@ export class TaskInfoComponent implements OnInit {
       }
       this.tasksService.updateComponent(task, this.taskIndex)
       // call update request
-      console.log(this.updatedTitle)
-      console.log(this.updatedDesc)
-      console.log(this.updatedState)
     } else {
-      console.log(this.updatedTitle)
-      console.log(this.updatedDesc)
-      console.log(this.updatedState)
       this.toastr.error('Please fill in all the fields.', 'ERROR', {
         timeOut: 3000,
         progressBar: true,

@@ -5,7 +5,7 @@
   </div>
   <div class="task-list">
     <div *ngFor="let task of taskList" class="single-task-box">
-      <app-task-component [taskContent]="task" [taskIndex]="taskList.indexOf(task)"></app-task-component>
+      <app-task-box [taskContent]="task" [taskIndex]="taskList.indexOf(task)"></app-task-box>
       <div class="deleteButton" [ngClass]="{'display': deleteMode}">
         <img 
           alt="remove-task" 

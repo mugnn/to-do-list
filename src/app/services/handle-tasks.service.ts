@@ -12,63 +12,63 @@ export class HandleTasksService {
     private formService: FormServiceService) {}
 
   async deleteComponent(componentNumber: Number): Promise<any> {
-    // return new Promise((resolve, reject) => {
-    //   this.http.delete(`${environment.deleteTask}/${componentNumber}`).subscribe(res => {
-    //     if (res) {
-    //       this.http.get(environment.getTasks).subscribe((taskList: any) => {
-    //         resolve(taskList);
-    //       }, error => {
-    //         reject(error)
-    //       })
-    //     } else {
-    //       resolve(null)
-    //     }
-    //   }, error => {
-    //     reject(error)
-    //   })
-    // })
+    return new Promise((resolve, reject) => {
+      this.http.delete(`${environment.deleteTask}/${componentNumber}`).subscribe(res => {
+        if (res) {
+          this.http.get(environment.getTasks).subscribe((taskList: any) => {
+            resolve(taskList);
+          }, error => {
+            reject(error)
+          })
+        } else {
+          resolve(null)
+        }
+      }, error => {
+        reject(error)
+      })
+    })
   }
 
   updateComponent(task: any, taskIndex: number): void {
-    // this.http.put(`${environment.updateTask}/${taskIndex}`, task).subscribe(res => {
-    //   if (res) {
-    //     this.formService.getTasks();
-    //     console.log('apareceu la')
-    //   }
-    // }) 
+    this.http.put(`${environment.updateTask}/${taskIndex}`, task).subscribe(res => {
+      if (res) {
+        this.formService.getTasks();
+        console.log('apareceu la')
+      }
+    }) 
   }
 
   async setSubTask(task: any, taskIndex: number): Promise<any> {
-    // return new Promise((resolve, reject) => {
-    //   const body = {
-    //     task: task,
-    //     taskIndex: taskIndex
-    //   }
-    //   this.http.post(environment.loadSubTask, body).subscribe(res => {
-    //     resolve(res)
-    //   }, error => {
-    //     reject(error);
-    //   })
-    // })
+    return new Promise((resolve, reject) => {
+      const body = {
+        task: task,
+        taskIndex: taskIndex
+      }
+      this.http.post(environment.loadSubTask, body).subscribe(res => {
+        resolve(res)
+      }, error => {
+        reject(error);
+      })
+    })
   }
 
   async getSubTasks(taskIndex: number): Promise<any> {
-    // return new Promise((resolve, reject) => {
-    //   this.http.get(`${environment.getSubTasks}/${taskIndex}`).subscribe((taskList: any) => {
-    //     resolve(taskList);
-    //   }, error => {
-    //     reject(error);
-    //   })
-    // })
+    return new Promise((resolve, reject) => {
+      this.http.get(`${environment.getSubTasks}/${taskIndex}`).subscribe((taskList: any) => {
+        resolve(taskList);
+      }, error => {
+        reject(error);
+      })
+    })
   }
 
   async deleteSubTasks(taskIndex: number, subTaskIndex: number): Promise<any> {
-    // return new Promise((resolve, reject) => {
-    //   this.http.delete(`${environment.deleteSubTask}/${taskIndex}/${subTaskIndex}`).subscribe(res => {
-    //     resolve(res);
-    //   }, error => {
-    //     reject(error);
-    //   })
-    // })
+    return new Promise((resolve, reject) => {
+      this.http.delete(`${environment.deleteSubTask}/${taskIndex}/${subTaskIndex}`).subscribe(res => {
+        resolve(res);
+      }, error => {
+        reject(error);
+      })
+    })
   }
 }

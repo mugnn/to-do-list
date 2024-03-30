@@ -25,9 +25,9 @@ export class SubTaskComponentComponent {
     await this.taskService.deleteSubTasks(this.taskIndex, this.subTaskIndex).then(async res => {
       console.log(res)
       if (res) {
-        await this.taskService.getSubTasks(this.subTaskIndex).then((taskList: any) => {
-          this.updatedTaskList.emit(taskList);
-        })
+        this.taskService.getSubTasks(this.taskIndex).then((res) => {
+          this.updatedTaskList.emit(res);
+        });
       }
     })
   }

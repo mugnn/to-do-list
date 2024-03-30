@@ -1,5 +1,5 @@
 import { AddRemoveComponentComponent } from './add-remove-component/add-remove-component.component';
-import { TaskComponentComponent } from './task-component/task-component.component';
+import { TaskBoxComponent } from './task-box/task-box.component';
 import { FormServiceService } from '../../services/form-service.service';
 import { HandleTasksService } from '../../services/handle-tasks.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,7 +10,7 @@ import { CommonModule, NgClass } from '@angular/common';
   standalone: true,
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
-  imports: [AddRemoveComponentComponent, TaskComponentComponent, CommonModule, NgClass],
+  imports: [AddRemoveComponentComponent, TaskBoxComponent, CommonModule, NgClass],
 })
 
 export class TasksComponent implements OnInit {
@@ -21,8 +21,7 @@ export class TasksComponent implements OnInit {
     private handleTasks: HandleTasksService) {};
 
   ngOnInit(): void {
-    const response = this.getFormService.getTasks();
-    response.then((result) => {
+    this.getFormService.getTasks().then((result) => {
       this.taskList = result;
     }).catch((error) => {
       console.error(error);
@@ -34,7 +33,6 @@ export class TasksComponent implements OnInit {
 
   toDelete(): void {
     this.deleteMode = !this.deleteMode
-    console.log(this.deleteMode)
   }
 
   async deleteComponent(component: Number) {
@@ -42,11 +40,15 @@ export class TasksComponent implements OnInit {
     this.taskList.splice(index, 1)
     try {
       const list = this.handleTasks.deleteComponent(component);
-      list.then((result) => {
-        this.taskList = result;
-      }).catch((error) => {
-        console.error(error);
-      })
+      if (this.taskList.length === 0) {
+        this.deleteMode = false;
+      } else {
+        list.then((result) => {
+          this.taskList = result;
+        }).catch((error) => {
+          console.error(error);
+        })
+      }
     } catch (error) {
       console.error(error);
     }

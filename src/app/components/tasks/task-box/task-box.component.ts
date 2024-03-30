@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { TaskInfoComponent } from '../../modal/task-info/task-info.component';
 
 @Component({
-  selector: 'app-task-component',
+  selector: 'app-task-box',
   standalone: true,
   imports: [ModalComponent, CommonModule, TaskInfoComponent],
-  templateUrl: './task-component.component.html',
-  styleUrl: './task-component.component.css'
+  templateUrl: './task-box.component.html',
+  styleUrl: './task-box.component.css'
 })
-export class TaskComponentComponent {
+export class TaskBoxComponent {
   @Input() taskContent: any;
   @Input() taskIndex: number = 0;
   

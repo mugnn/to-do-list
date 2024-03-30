@@ -29,7 +29,6 @@ export class SubTasksComponent implements OnInit {
   async getSubTasks() {
     await this.taskService.getSubTasks(this.taskIndex).then((value) => {
       this.subTaskList = value
-      console.log(this.subTaskList)
     }).catch(error => {
       console.error(error)
     });
